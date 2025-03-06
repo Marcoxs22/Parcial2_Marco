@@ -33,4 +33,14 @@ public class PlatformsInstantiate : MonoBehaviour
             platform.transform.SetParent(transform);
         }
     }
+
+
+    public void Restart()
+    {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+        Start();
+    }
 }
